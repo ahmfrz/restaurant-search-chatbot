@@ -42,6 +42,7 @@
 - dear sir
 - hola
 - Hola
+- Hello
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -116,6 +117,8 @@
 - [Mexican](cuisine)
 - where can i find good food?
 - [Faridabad](location)
+- I'm hungry. Looking out for some good restaurants
+- [Malegaon](location)
 - [Italian](cuisine)
 
 ## intent:email_input

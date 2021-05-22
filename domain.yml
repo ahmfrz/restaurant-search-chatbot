@@ -3,13 +3,14 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- deny
 - restaurant_search
 - greet
+- deny
 - email_input
 - affirm
 - goodbye
 entities:
+- budget
 - cuisine
 - email
 - location
@@ -23,8 +24,11 @@ slots:
     influence_conversation: true
   response:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   email:
+    type: text
+    influence_conversation: true
+  budget:
     type: text
     influence_conversation: true
 responses:
@@ -43,6 +47,15 @@ responses:
     - payload: American
       title: American
     text: what kind of cuisine would you like?
+  utter_ask_budget:
+  - buttons:
+    - payload: /Lesser than 300{{"price":"low"}}
+      title: Lesser than 300
+    - payload: /Rs. 300 to 700{{"price":"mid"}}
+      title: Rs. 300 to 700
+    - payload: /More than 700{{"price":"high"}}
+      title: More than 700
+    text: what is the average budget for two people?
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
@@ -50,7 +63,7 @@ responses:
   utter_default:
   - text: i cannot understand
   utter_goodbye:
-  - text: goodbye :(
+  - text: goodbye
   - text: Bye-bye
   utter_greet:
   - text: hey there! How may i help you
@@ -71,6 +84,7 @@ responses:
 actions:
 - action_search_restaurants
 - action_send_mail
+- utter_ask_budget
 - utter_ask_cuisine
 - utter_ask_howcanhelp
 - utter_ask_location

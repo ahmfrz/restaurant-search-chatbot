@@ -114,3 +114,15 @@
     - utter_email
 * deny
     - utter_goodbye
+
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "Malegaon"}
+    - slot{"location": "Malegaon"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "Italian"}
+    - slot{"cuisine": "Italian"}
+    - action_search_restaurants
+    - utter_goodbye
