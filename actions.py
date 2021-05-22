@@ -44,6 +44,7 @@ class ActionSearchRestaurants(Action):
             return []
 
         results = self.restaurant_search(loc, cuisine, budget)
+        print(F"@@@ Location: {loc}, Cuisine: {cuisine}, budget: {budget}")
         print(F"@@@ Result: {results}")
 
         if results.shape[0] == 0:
@@ -57,7 +58,13 @@ class ActionSearchRestaurants(Action):
                     F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']} \n\n"
 
         dispatcher.utter_message(response)
-        return [SlotSet('location', loc), SlotSet('response', results)]
+
+        # search result for email
+        search_result = ''.join(
+            [F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']}"
+             for restaurant in results.iloc[:10, :]])
+
+        return [SlotSet('location', loc), SlotSet('response', search_result)]
 
     def validate_city(self, location):
         return location.lower() in self.operate_city
@@ -95,12 +102,7 @@ class ActionSendMail(Action):
         mailID = tracker.get_slot('email')
         response = tracker.get_slot('response')
 
-        # top 10 restaurants
-        search_result = ''.join(
-            [F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']}"
-             for restaurant in response.iloc[:10, :]])
-
-        self.sendmail(mailID, search_result)
+        self.sendmail(mailID, response)
         return [SlotSet('email', mailID)]
 
     def sendmail(self, mailID, response):
