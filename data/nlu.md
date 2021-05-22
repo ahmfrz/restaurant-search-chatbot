@@ -1,5 +1,4 @@
 ## intent:affirm
-
 - yes
 - yep
 - yeah
@@ -16,12 +15,16 @@
 - thanks a lot
 
 ## intent:deny
-
 - no
 - nope
+- no, thanks!
+- not required
+- no need
+- not interested
+- i'm good
+- that's all
 
 ## intent:goodbye
-
 - bye
 - goodbye
 - good bye
@@ -32,7 +35,6 @@
 - have a good one
 
 ## intent:greet
-
 - hey
 - howdy
 - hey there
@@ -47,9 +49,10 @@
 - hola
 - Hola
 - Hello
+- heyy
+- hie
 
 ## intent:restaurant_search
-
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
@@ -89,20 +92,20 @@
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
-- I want [exotic]{"entity": "budget", "value": "high"} [mexican](cuisine) food.
-- can you book a table in [Aurangabad](location) in a [moderate]{"entity": "budget", "value": "mid"} price range with [british](cuisine) food for four people
-- I want to eat [cheap]{"entity": "budget", "value": "low"} [chinese](cuisine) food
-- I want to eat [expensive]{"entity": "budget", "value": "high"} [Italian](cuisine) food in [Mumbai](location)
+- I want [exotic]{"entity": "budget", "value": "More than 700"} [mexican](cuisine) food.
+- can you book a table in [Aurangabad](location) in a [moderate]{"entity": "budget", "value": "Rs. 300 to 700"} price range with [british](cuisine) food for four people
+- I want to eat [cheap]{"entity": "budget", "value": "Lesser than 300"} [chinese](cuisine) food
+- I want to eat [expensive]{"entity": "budget", "value": "More than 700"} [Italian](cuisine) food in [Mumbai](location)
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurant in [bangalore](location)
-- Please find me [cheap]{"entity": "budget", "value": "low"} restaurants in [Mangalore](location)
-- I want to eat in a [pocket friendly]{"entity": "budget", "value": "low"} restaurant
-- I am looking for [budget friendly]{"entity": "budget", "value": "low"} [South Indian](cuisine) restaurants
-- I would like to eat [North-Indian]{"entity": "cuisine", "value": "North Indian"} cuisine in an [average]{"entity": "budget", "value": "mid"} priced hotel
-- We want [mexican](cuisine) food which is [expensive]{"entity": "budget", "value": "high"}
-- Suggest me some [expensive]{"entity": "budget", "value": "high"} hotels for food
-- I am looking for a [inexpensive]{"entity": "budget", "value": "low"} theme restaurant in [Puducherry](location)
+- Please find me [cheap]{"entity": "budget", "value": "Lesser than 300"} restaurants in [Mangalore](location)
+- I want to eat in a [pocket friendly]{"entity": "budget", "value": "Lesser than 300"} restaurant
+- I am looking for [budget friendly]{"entity": "budget", "value": "Lesser than 300"} [South Indian](cuisine) restaurants
+- I would like to eat [North-Indian]{"entity": "cuisine", "value": "North Indian"} cuisine in an [average]{"entity": "budget", "value": "Rs. 300 to 700"} priced hotel
+- We want [mexican](cuisine) food which is [expensive]{"entity": "budget", "value": "More than 700"}
+- Suggest me some [expensive]{"entity": "budget", "value": "More than 700"} hotels for food
+- I am looking for a [inexpensive]{"entity": "budget", "value": "Lesser than 300"} theme restaurant in [Puducherry](location)
 - [mumbai](location)
 - show me restaurants
 - Find restaurants
@@ -124,30 +127,35 @@
 - [Faridabad](location)
 - I'm hungry. Looking out for some good restaurants
 - [Malegaon](location)
-- [Italian](cuisine)
+- [Lesser than 300](budget)
+- [Rs. 300 to 700](budget)
+- [More than 700](budget)
+- i'm hungry, looking for food
+- [chandigarh](location)
+- hungry
+- I'm hungry. looking out for some good [chinese](cuisine) restaurants in [Chandigarh](location)
+- [cheap]{"entity": "budget", "value": "Lesser than 300"} [chinese](cuisine) restaurant in [gurgaon](location)
+- [expensive]{"entity": "budget", "value": "More than 700"} [italian](cuisine) hotel in [mumbai](location)
 
 ## intent:email_input
-
 - [abcd_123@gmail.com](email)
 - My email id is [randomyguy@yahoo.com](email)
 - Email : [rahul@outlook.com](email)
 - [hello@ymail.com](email)
 - [test@outlook.com](email)
+- [abd@dev.com](email)
+- [test@gmail.com](email)
 
 ## synonym: Mumbai
-
 - Bombay
 
 ## synonym:Ahmedabad
-
 - Ahemdabad
 
 ## synonym:Chennai
-
 - Madras
 
 ## synonym:Delhi
-
 - New Delhi
 - Dilli
 - Old Delhi
@@ -155,48 +163,9 @@
 - Old-Delhi
 
 ## synonym:Gurgaon
-
 - Gurugram
 
-## synonym:Mysore
-
-- Mysuru
-
-## synonym:Nashik
-
-- nasik
-- Nasik
-
-## synonym:Puducherry
-
-- Pondicherry
-
-## synonym:North Indian
-
-- North-Indian
-
-## synonym:South Indian
-
-- South-Indian
-
-## synonym:bangalore
-
-- Bengaluru
-
-## synonym:chinese
-
-- chines
-- Chinese
-- Chines
-
-## synonym:high
-
-- exotic
-- expensive
-- costly
-
-## synonym:low
-
+## synonym:Lesser than 300
 - cheap
 - pocket friendly
 - budget friendly
@@ -204,24 +173,45 @@
 - nominal
 - economic
 
-## synonym:mid
+## synonym:More than 700
+- exotic
+- expensive
+- costly
 
+## synonym:Mysore
+- Mysuru
+
+## synonym:Nashik
+- nasik
+- Nasik
+
+## synonym:North Indian
+- North-Indian
+
+## synonym:Puducherry
+- Pondicherry
+
+## synonym:Rs. 300 to 700
 - moderate
 - average
 
-## synonym:vegetarian
+## synonym:South Indian
+- South-Indian
 
+## synonym:bangalore
+- Bengaluru
+
+## synonym:chinese
+- chines
+- Chinese
+- Chines
+
+## synonym:vegetarian
 - veggie
 - vegg
 
 ## regex:email
-
 - ^[a-z_.0-9]{4,20}@[a-z]{3,15}\.(com|in|org)$
 
 ## regex:greet
-
 - hey[^\s]\*
-
-## regex:pincode
-
-- [0-9]{6}

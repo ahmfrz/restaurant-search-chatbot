@@ -59,10 +59,14 @@ class ActionSearchRestaurants(Action):
 
         dispatcher.utter_message(response)
 
+        print(results.iloc[:10, :])
+
         # search result for email
-        search_result = ''.join(
-            [F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']}"
-             for restaurant in results.iloc[:10, :]])
+        search_result = ""
+        for restaurant in results.iloc[:10].iterrows():
+                restaurant = restaurant[1]
+                search_result = search_result + \
+                    F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']} \n\n"
 
         return [SlotSet('location', loc), SlotSet('response', search_result)]
 
@@ -73,13 +77,13 @@ class ActionSearchRestaurants(Action):
         return cuisine.lower() in self.cuisine
 
     def isinbudget(self, value, budget_type):
-        if(budget_type == 'low'):
+        if(budget_type == 'Lesser than 300'):
             return value <= 300
 
-        if(budget_type == 'mid'):
+        if(budget_type == 'Rs. 300 to 700'):
             return value > 300 and value <= 700
 
-        if(budget_type == 'high'):
+        if(budget_type == 'More than 700'):
             return value > 700
 
     def restaurant_search(self, city, cuisine, budget_type):
