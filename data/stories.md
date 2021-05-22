@@ -551,3 +551,83 @@
     - slot{"location": "surat"}
     - action_search_restaurants
     - utter_goodbye
+
+* restaurant_search{"location": "mangalore", "cuisine": "american", "budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - action_search_restaurants
+    - slot{"location": "mangalore"}
+    - slot{"response": ""}
+
+* restaurant_search{"location": "mangalore", "cuisine": "american", "budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - action_search_restaurants
+    - utter_goodbye
+* affirm
+
+* restaurant_search{"location": "mangalore", "cuisine": "american", "budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - action_search_restaurants
+    - utter_goodbye
+* restaurant_search{"cuisine": "chinese", "budget": "More than 700"}
+    - slot{"cuisine": "chinese"}
+    - slot{"budget": "More than 700"}
+    - utter_ask_location
+* restaurant_search{"location": "indore"}
+    - slot{"location": "indore"}
+    - action_search_restaurants
+    - slot{"location": "indore"}
+    - slot{"response": "Square - Sayaji Hotel in Sayaji Hotel, H-1, Scheme 54, Vijay Nagar, Indore rated 4.3 with avg cost 1500 \n\nNafees Restaurant in 30-B, Apollo Avenue, Opposite Palasia Thana, Old Palasia, Indore rated 4.2 with avg cost 800 \n\nJAL - A Jungle Restaurant in Behind Pushp Kunj Hospital, Khandwa Road, Bhawar Kuan, Indore rated 4.1 with avg cost 850 \n\nPishori Restaurant in 910, Khatiwala Tank, Sapna Sangeeta, Indore rated 4.1 with avg cost 800 \n\nVidorra in 1001, Rooftop, Shekhar Central, Palasia Square, New Palasia, Indore rated 4.0 with avg cost 1200 \n\n10 Downing Street in Second Floor, Malhar Mega Mall, AB Road, Scheme 54, Vijay Nagar, Indore rated 4.0 with avg cost 1500 \n\nKYRO in Fortune Aura Rooftop, 1,  Gurmeet Nagar, Bhawar Kuan Main Road, Bhawar Kuan, Indore rated 3.7 with avg cost 1300 \n\n"}
+    - utter_email
+* goodbye
+
+* restaurant_search{"location": "mangalore", "cuisine": "american", "budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - slot{"cuisine": "american"}
+    - slot{"location": "mangalore"}
+    - slot{"budget": "Lesser than 300"}
+    - action_search_restaurants
+    - utter_goodbye
+* restaurant_search{"cuisine": "chinese", "budget": "More than 700"}
+    - slot{"cuisine": "chinese"}
+    - slot{"budget": "More than 700"}
+    - slot{"cuisine": "chinese"}
+    - slot{"budget": "More than 700"}
+    - utter_ask_location
+* restaurant_search{"location": "indore"}
+    - slot{"location": "indore"}
+    - slot{"location": "indore"}
+    - action_search_restaurants
+    - slot{"location": "indore"}
+    - slot{"response": "Square - Sayaji Hotel in Sayaji Hotel, H-1, Scheme 54, Vijay Nagar, Indore rated 4.3 with avg cost 1500 \n\nNafees Restaurant in 30-B, Apollo Avenue, Opposite Palasia Thana, Old Palasia, Indore rated 4.2 with avg cost 800 \n\nJAL - A Jungle Restaurant in Behind Pushp Kunj Hospital, Khandwa Road, Bhawar Kuan, Indore rated 4.1 with avg cost 850 \n\nPishori Restaurant in 910, Khatiwala Tank, Sapna Sangeeta, Indore rated 4.1 with avg cost 800 \n\nVidorra in 1001, Rooftop, Shekhar Central, Palasia Square, New Palasia, Indore rated 4.0 with avg cost 1200 \n\n10 Downing Street in Second Floor, Malhar Mega Mall, AB Road, Scheme 54, Vijay Nagar, Indore rated 4.0 with avg cost 1500 \n\nKYRO in Fortune Aura Rooftop, 1,  Gurmeet Nagar, Bhawar Kuan Main Road, Bhawar Kuan, Indore rated 3.7 with avg cost 1300 \n\n"}
+    - utter_email
+* restaurant_search{"location": "goa"}
+    - slot{"location": "goa"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "burmese"}
+    - slot{"cuisine": "burmese"}
+    - utter_ask_budget
+* restaurant_search{"budget": "More than 700"}
+    - slot{"budget": "More than 700"}
+    - action_search_restaurants
+    - utter_goodbye
+
+* restaurant_search{"location": "coimbatore", "budget": "More than 700", "cuisine": "sea food"}
+    - slot{"cuisine": "sea food"}
+    - slot{"location": "coimbatore"}
+    - slot{"budget": "More than 700"}
+    - action_search_restaurants
+    - utter_goodbye

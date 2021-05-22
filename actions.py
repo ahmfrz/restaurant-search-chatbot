@@ -47,13 +47,15 @@ class ActionSearchRestaurants(Action):
 
         if results.shape[0] == 0:
             response = "no results"
+            dispatcher.utter_message(response)
+            return []
         else:
             response = 'Top 5 search results: \n\n'
             response = response + '-' * 50
             for restaurant in results.iloc[:5].iterrows():
                 restaurant = restaurant[1]
                 response = response + \
-                    F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']} \n\n"
+                    F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} \n\n"
 
         dispatcher.utter_message(response)
 

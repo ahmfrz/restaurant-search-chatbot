@@ -149,13 +149,16 @@
 - please show me a few [cheap]{"entity": "budget", "value": "Lesser than 300"} [american](cuisine) hotels in [nasik]{"entity": "location", "value": "Nashik"}
 - find a good place to eat
 - [ahemdabad]{"entity": "location", "value": "Ahmedabad"}
-- [Chinese]{"entity": "cuisine", "value": "chinese"}
-- [More than 700](budget)
 - please find me [expensive]{"entity": "budget", "value": "More than 700"} [chinese](cuisine) food
-- [amritsar](location)
 - [mexican](cuisine) food under [300]{"entity": "budget", "value": "Lesser than 300"}
-- food under [500]{"entity": "budget", "value": "Rs. 300 to 700}
+- food under [500]{"entity": "budget", "value": "Rs. 300 to 700"}
 - [puducherry](location)
+- [mangalore](location) [american](cuisine) food [inexpensive]{"entity": "budget", "value": "Lesser than 300"}
+- [mangalore](location) [american](cuisine) food < [300]{"entity": "budget", "value": "Lesser than 300"}
+- [chinese](cuisine) food [> 700]{"entity": "budget", "value": "More than 700"}
+- [indore](location)
+- spicy food in [goa](location)
+- [coimbatore](location) [exotic]{"entity": "budget", "value": "More than 700"} [sea food](cuisine)
 
 ## intent:email_input
 - [abcd_123@gmail.com](email)
@@ -173,6 +176,7 @@
 
 ## synonym:Ahmedabad
 - Ahemdabad
+- ahemdabad
 
 ## synonym:Chennai
 - Madras
@@ -192,12 +196,14 @@
 - pocket friendly
 - budget friendly
 - inexpensive
+- 300
 - nominal
 - economic
 
 ## synonym:More than 700
 - exotic
 - expensive
+- > 700
 - costly
 
 ## synonym:Mysore
@@ -216,6 +222,7 @@
 ## synonym:Rs. 300 to 700
 - moderate
 - average
+- 500
 
 ## synonym:South Indian
 - South-Indian

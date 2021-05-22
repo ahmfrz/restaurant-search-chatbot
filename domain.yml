@@ -5,9 +5,9 @@ session_config:
 intents:
 - restaurant_search
 - affirm
+- goodbye
 - greet
 - deny
-- goodbye
 - email_input
 entities:
 - budget
