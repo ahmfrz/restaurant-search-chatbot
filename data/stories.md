@@ -98,3 +98,19 @@
     - slot{"response": "no results"}
     - utter_goodbye
     
+
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "Faridabad"}
+    - slot{"location": "Faridabad"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "Italian"}
+    - slot{"cuisine": "Italian"}
+    - action_search_restaurants
+    - slot{"location": "Faridabad"}
+    - slot{"response": "Found Oregano India in Shop 2661, Sector 7-10 Market, YMCA Road, Sector 10, Faridabad rated Shop 2661, Sector 7-10 Market, YMCA Road, Sector 10, Faridabad with avg cost 500 \n\nFound Oxy Lounge in Town Park, Opposite District Court, Sector 12, Faridabad rated Town Park, Opposite District Court, Sector 12, Faridabad with avg cost 1500 \n\nFound Cafe Parmesan in 42, 1st Floor, HUDA Market, Sector 15, Faridabad rated 42, 1st Floor, HUDA Market, Sector 15, Faridabad with avg cost 1000 \n\nFound Cafe Grub Up in SCF 43, 2nd Floor, Main Market, Sector 15, Faridabad rated SCF 43, 2nd Floor, Main Market, Sector 15, Faridabad with avg cost 900 \n\nFound Caf Bogchi in SCF 39, First Floor, Above Axis Bank, Sector 15, Faridabad rated SCF 39, First Floor, Above Axis Bank, Sector 15, Faridabad with avg cost 650 \n\n"}
+    - utter_email
+* deny
+    - utter_goodbye

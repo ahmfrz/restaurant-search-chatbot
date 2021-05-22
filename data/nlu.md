@@ -41,6 +41,7 @@
 - noon
 - dear sir
 - hola
+- Hola
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -113,6 +114,9 @@
 - [burmese](cuisine)
 - [nasik]{"entity": "location", "value": "Nashik"}
 - [Mexican](cuisine)
+- where can i find good food?
+- [Faridabad](location)
+- [Italian](cuisine)
 
 ## intent:email_input
 - [abcd_123@gmail.com](email)
@@ -144,6 +148,7 @@
 - Mysuru
 
 ## synonym:Nashik
+- nasik
 - Nasik
 
 ## synonym:Puducherry
