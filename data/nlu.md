@@ -13,6 +13,9 @@
 - thanks
 - thank you
 - thanks a lot
+- yup
+- okay
+- thanks!
 
 ## intent:deny
 - no
@@ -23,6 +26,7 @@
 - not interested
 - i'm good
 - that's all
+- no thanks.
 
 ## intent:goodbye
 - bye
@@ -33,6 +37,7 @@
 - farewell
 - Bye bye
 - have a good one
+- bye!
 
 ## intent:greet
 - hey
@@ -136,6 +141,21 @@
 - I'm hungry. looking out for some good [chinese](cuisine) restaurants in [Chandigarh](location)
 - [cheap]{"entity": "budget", "value": "Lesser than 300"} [chinese](cuisine) restaurant in [gurgaon](location)
 - [expensive]{"entity": "budget", "value": "More than 700"} [italian](cuisine) hotel in [mumbai](location)
+- i want to eat
+- [bengaluru]{"entity": "location", "value": "bangalore"}
+- [tata](location)
+- can you suggest some good restaurants in [rishikesh](location)
+- good food in [faridabad](location)
+- please show me a few [cheap]{"entity": "budget", "value": "Lesser than 300"} [american](cuisine) hotels in [nasik]{"entity": "location", "value": "Nashik"}
+- find a good place to eat
+- [ahemdabad]{"entity": "location", "value": "Ahmedabad"}
+- [Chinese]{"entity": "cuisine", "value": "chinese"}
+- [More than 700](budget)
+- please find me [expensive]{"entity": "budget", "value": "More than 700"} [chinese](cuisine) food
+- [amritsar](location)
+- [mexican](cuisine) food under [300]{"entity": "budget", "value": "Lesser than 300"}
+- food under [500]{"entity": "budget", "value": "Rs. 300 to 700}
+- [puducherry](location)
 
 ## intent:email_input
 - [abcd_123@gmail.com](email)
@@ -145,6 +165,8 @@
 - [test@outlook.com](email)
 - [abd@dev.com](email)
 - [test@gmail.com](email)
+- [kritka.ag@ymail.com](email)
+- yes, [af.y@ymail.com](email)
 
 ## synonym: Mumbai
 - Bombay
@@ -199,6 +221,7 @@
 - South-Indian
 
 ## synonym:bangalore
+- bengaluru
 - Bengaluru
 
 ## synonym:chinese

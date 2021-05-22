@@ -39,13 +39,11 @@ class ActionSearchRestaurants(Action):
             return []
 
         if(self.validate_cuisine(cuisine) == False):
-            response = F"We do not serve {cuisine}"
+            response = F"We do not serve {cuisine} food"
             dispatcher.utter_message(response)
             return []
 
         results = self.restaurant_search(loc, cuisine, budget)
-        print(F"@@@ Location: {loc}, Cuisine: {cuisine}, budget: {budget}")
-        print(F"@@@ Result: {results}")
 
         if results.shape[0] == 0:
             response = "no results"
@@ -58,8 +56,6 @@ class ActionSearchRestaurants(Action):
                     F"{restaurant['Restaurant Name']} in {restaurant['Address']} rated {restaurant['Aggregate rating']} with avg cost {restaurant['Average Cost for two']} \n\n"
 
         dispatcher.utter_message(response)
-
-        print(results.iloc[:10, :])
 
         # search result for email
         search_result = ""
@@ -110,8 +106,7 @@ class ActionSendMail(Action):
         return [SlotSet('email', mailID)]
 
     def sendmail(self, mailID, response):
-        mail_content = F"Hello,\n\nGet ready to eat! Your search results are here.\n{response}"
-        print(mail_content)
+        mail_content = F"Hello,\n\nGet ready to eat! Your search results are here:\n\n{response}"
         if(mailID != None):
             return
         # The mail addresses and password
