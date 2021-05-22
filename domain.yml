@@ -4,11 +4,11 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - restaurant_search
+- deny
 - email_input
 - greet
 - affirm
 - goodbye
-- stop
 entities:
 - cuisine
 - email

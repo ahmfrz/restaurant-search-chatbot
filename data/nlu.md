@@ -14,6 +14,10 @@
 - thank you
 - thanks a lot
 
+## intent:deny
+- no
+- nope
+
 ## intent:goodbye
 - bye
 - goodbye
@@ -103,12 +107,19 @@
 - I want food
 - [egypt](location)
 - [delhi](location) [mexican](cuisine)
+- [american](cuisine)
+- [gurgaon](location)
+- [amritsar](location)
+- [burmese](cuisine)
+- [nasik]{"entity": "location", "value": "Nashik"}
+- [Mexican](cuisine)
 
 ## intent:email_input
 - [abcd_123@gmail.com](email)
 - My email id is [randomyguy@yahoo.com](email)
 - Email : [rahul@outlook.com](email)
 - [hello@ymail.com](email)
+- [test@outlook.com](email)
 
 ## synonym: Mumbai
 - Bombay
