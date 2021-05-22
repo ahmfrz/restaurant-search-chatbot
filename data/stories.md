@@ -137,6 +137,8 @@
 * restaurant_search{"budget": "Lesser than 300"}
     - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - slot{"response": ""}
     - utter_goodbye
 * restaurant_search{"location": "tata"}
     - slot{"location": "tata"}
@@ -157,6 +159,8 @@
     - slot{"budget": "Lesser than 300"}
     - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - slot{"response": ""}
     - utter_goodbye
 * restaurant_search{"location": "rishikesh"}
     - slot{"location": "rishikesh"}
@@ -189,6 +193,8 @@
     - slot{"budget": "Lesser than 300"}
     - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - slot{"response": ""}
     - utter_goodbye
 * restaurant_search{"location": "rishikesh"}
     - slot{"location": "rishikesh"}
@@ -247,6 +253,8 @@
     - slot{"budget": "Lesser than 300"}
     - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - slot{"response": ""}
     - utter_goodbye
 * restaurant_search{"location": "rishikesh"}
     - slot{"location": "rishikesh"}
@@ -293,6 +301,8 @@
     - slot{"location": "Nashik"}
     - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
+    - slot{"location": "Nashik"}
+    - slot{"response": ""}
     - utter_goodbye
 
 * restaurant_search
@@ -540,6 +550,8 @@
     - action_search_restaurants
     - utter_goodbye
 
+
+
 * restaurant_search{"location": "mangalore", "cuisine": "american", "budget": "Lesser than 300"}
     - slot{"cuisine": "american"}
     - slot{"location": "mangalore"}
@@ -609,5 +621,12 @@
     - slot{"cuisine": "sea food"}
     - slot{"location": "coimbatore"}
     - slot{"budget": "More than 700"}
+    - action_search_restaurants
+    - utter_goodbye
+
+* restaurant_search{"budget": "Lesser than 300", "cuisine": "thai", "location": "america"}
+    - slot{"cuisine": "thai"}
+    - slot{"location": "america"}
+    - slot{"budget": "Lesser than 300"}
     - action_search_restaurants
     - utter_goodbye

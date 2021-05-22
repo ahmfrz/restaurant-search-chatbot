@@ -23,7 +23,7 @@ slots:
     influence_conversation: true
   response:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   email:
     type: text
     influence_conversation: true

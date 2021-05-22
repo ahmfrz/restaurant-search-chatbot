@@ -159,6 +159,7 @@
 - [indore](location)
 - spicy food in [goa](location)
 - [coimbatore](location) [exotic]{"entity": "budget", "value": "More than 700"} [sea food](cuisine)
+- [cheap]{"entity": "budget", "value": "Lesser than 300"} [thai](cuisine) food in [america](location)
 
 ## intent:email_input
 - [abcd_123@gmail.com](email)
